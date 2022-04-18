@@ -19,6 +19,8 @@ export class HomeComponent implements OnInit {
   }
 
   onFilter(category: string) {
-    console.log(category)
+    this.products = category === 'all'
+      ? products
+      : products.filter(product => product.categories.includes(category));
   }
 }

@@ -17,7 +17,8 @@ button:not(:last-of-type) {
   border-right: none;
 }
 
-button:hover {
+button:hover,
+button:focus {
   background-color: var(--grey-60);
   color: var(--in-content-page-color);
 }
