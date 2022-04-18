@@ -3,3 +3,11 @@
   max-width: 1150px;
   margin: 0 auto;
 }
+
+.items-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 35px;
+  justify-items: center;
+}

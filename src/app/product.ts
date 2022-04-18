@@ -128,4 +128,4 @@ export const products: Product[] = [
   },
 ]
 
-export const categories: string[] = ['school', 'tech', 'nature', 'office', 'building', 'home'];
+export const categories: string[] = ['all', 'school', 'tech', 'nature', 'office', 'building', 'home'];

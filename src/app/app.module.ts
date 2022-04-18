@@ -7,6 +7,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { CategoriesFilterComponent } from './categories-filter/categories-filter.component';
 import { HomeComponent } from './home/home.component';
 import { CapitalizePipe } from './capitalize.pipe';
+import { ItemCardComponent } from './item-card/item-card.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CapitalizePipe } from './capitalize.pipe';
     CategoriesFilterComponent,
     HomeComponent,
     CapitalizePipe,
+    ItemCardComponent,
   ],
   imports: [
     BrowserModule,
