@@ -49,18 +49,21 @@ input:valid + label {
 }
 
 
-button {
+.cart-btn {
+  cursor: default;
   position: relative;
   display: flex;
   background-color: transparent;
   border: none;
   border-radius: 7px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   padding: 5px;
   transition: all 250ms;
 }
 
-button:hover {
-  background-color: var(--in-content-page-color);
+.cart-btn-container:hover .cart-btn {
+  background-color: var(--grey-30);
 }
 
 i {
@@ -69,7 +72,7 @@ i {
   transition: all 250ms;
 }
 
-button:hover i {
+.cart-btn-container:hover .cart-btn i {
   color: black;
 }
 
@@ -85,4 +88,78 @@ button:hover i {
   bottom: 0;
   right: 0;
   font-weight: bold;
+  transition: all 250ms;
+}
+
+.cart-btn-container:hover .number-of-items {
+  display: none;
+}
+
+.cart-btn-container {
+  position: relative;
+}
+
+.cart-items {
+  display: none;
+  width: 250px;
+  background-color: var(--grey-30);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  border-radius: 7px;
+  border-top-right-radius: 0;
+  padding: 10px;
+  z-index: 2;
+}
+
+.cart-btn-container:hover .cart-items {
+  display: block;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px dashed black;
+}
+
+.item:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.item > * {
+  flex: 1;
+}
+
+.item-qnt {
+  text-align: center;
+}
+
+.item-price {
+  text-align: right;
+}
+
+.total-cart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-btn {
+  width: 100%;
+  cursor: pointer;
+  color: var(--in-content-page-color);
+  background-color: var(--blue-40);
+  border: none;
+  padding: 7px;
+  border-radius: 7px;
+  margin-top: 25px;
+}
+
+.checkout-btn:hover:not(:disabled) {
+  background-color: var(--blue-50);
+}
+
+.checkout-btn:disabled {
+  cursor: not-allowed;
+  background-color: var(--grey-60);
 }
