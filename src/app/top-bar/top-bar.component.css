@@ -50,6 +50,7 @@ input:valid + label {
 
 
 button {
+  position: relative;
   display: flex;
   background-color: transparent;
   border: none;
@@ -70,4 +71,17 @@ i {
 
 button:hover i {
   color: black;
+}
+
+.number-of-items {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  color: var(--grey-60);
+  background-color: var(--in-content-page-color);
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  bottom: 0;
+  right: 0;
 }

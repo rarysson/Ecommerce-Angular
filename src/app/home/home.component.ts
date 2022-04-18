@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { products } from '../product';
+import { CartService } from '../cart.service';
+import { Product, products } from '../product';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,15 @@ import { products } from '../product';
 export class HomeComponent implements OnInit {
   products = products;
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void { }
+
+  onAddToCart(product: Product) {
+    this.cartService.addToCart(product);
+  }
+
+  onFilter(category: string) {
+    console.log(category)
+  }
 }

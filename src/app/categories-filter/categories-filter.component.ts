@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { categories } from '../product';
 
 @Component({
@@ -7,6 +7,8 @@ import { categories } from '../product';
   styleUrls: ['./categories-filter.component.css']
 })
 export class CategoriesFilterComponent implements OnInit {
+  @Output() filter = new EventEmitter();
+
   categories: string[] = categories;
 
   constructor() { }
