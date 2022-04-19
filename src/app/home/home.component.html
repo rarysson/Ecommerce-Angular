@@ -1,6 +1,0 @@
-<app-categories-filter (filter)="onFilter($event)"></app-categories-filter>
-
-<div class="items-container">
-  <app-item-card *ngFor="let product of products" [product]="product" (addToCart)="onAddToCart(product)">
-  </app-item-card>
-</div>
