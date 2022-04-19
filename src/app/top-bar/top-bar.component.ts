@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 
-interface CartItem {
-  name: string;
-  qnt: number;
-  price: number;
-}
-
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
@@ -21,23 +15,8 @@ export class TopBarComponent implements OnInit {
     return this.cartService.getItems().length;
   }
 
-  itemsOnCart(): CartItem[] {
-    const items = this.cartService.getItems().reduce((acc, value) => {
-      if (!acc[value.name]) {
-        acc[value.name] = {
-          name: value.name,
-          qnt: 1,
-          price: value.price
-        }
-      } else {
-        acc[value.name].qnt++;
-        acc[value.name].price += value.price;
-      }
-
-      return acc;
-    }, {} as Record<string, CartItem>);
-
-    return Object.values(items);
+  itemsOnCart() {
+    return this.cartService.getOrganizedItems();
   }
 
   totalPrice(): number {

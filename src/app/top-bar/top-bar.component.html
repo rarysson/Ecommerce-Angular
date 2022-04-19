@@ -25,6 +25,6 @@
       <p>{{ totalPrice() | currency }}</p>
     </div>
 
-    <button class="checkout-btn" [disabled]="!totalItemsOnCart()">Checkout</button>
+    <button class="checkout-btn" [disabled]="!totalItemsOnCart()" routerLink="/checkout">Checkout</button>
   </div>
 </div>

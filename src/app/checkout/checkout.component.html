@@ -1,0 +1,12 @@
+<div class="item" *ngFor="let item of cartItems()">
+  <p class="item-name">{{ item.name }}</p>
+  <p class="item-qnt">{{ item.qnt }}</p>
+  <p class="item-price">{{ item.price | currency }}</p>
+</div>
+
+<div class="total-cart">
+  <p>Total</p>
+  <p>{{ totalPrice() | currency }}</p>
+</div>
+
+<button (click)="buy()">Buy</button>

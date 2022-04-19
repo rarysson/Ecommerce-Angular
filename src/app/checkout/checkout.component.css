@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px dashed black;
+}
+
+.item:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.item > * {
+  flex: 1;
+}
+
+.item-qnt {
+  text-align: center;
+}
+
+.item-price {
+  text-align: right;
+}
+
+.total-cart {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 100%;
+  cursor: pointer;
+  color: var(--in-content-page-color);
+  background-color: var(--blue-40);
+  border: none;
+  padding: 7px;
+  border-radius: 7px;
+  margin-top: 25px;
+}
+
+button:hover {
+  background-color: var(--blue-50);
+}

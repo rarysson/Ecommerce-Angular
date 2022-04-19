@@ -8,6 +8,7 @@ import { CategoriesFilterComponent } from './categories-filter/categories-filter
 import { HomeComponent } from './home/home.component';
 import { CapitalizePipe } from './capitalize.pipe';
 import { ItemCardComponent } from './item-card/item-card.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ItemCardComponent } from './item-card/item-card.component';
     HomeComponent,
     CapitalizePipe,
     ItemCardComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
